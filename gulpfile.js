@@ -16,7 +16,7 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('minify-css', () => {
-  return gulp.src('./css/*.css')
+  return gulp.src(['./css/*.css', '!./css/*.min.css'])
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css'));
