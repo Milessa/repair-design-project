@@ -329,20 +329,20 @@ template {
     background-color: #ffffff;
     cursor: pointer;
     box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3); }
-  .button--primary {
+  .button_primary {
     background-color: #E3B873;
     color: #ffffff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
     transition: box-shadow 0.2s; }
-    .button--primary:hover {
+    .button_primary:hover {
       box-shadow: none;
       box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3); }
-  .button--outline {
+  .button_outline {
     border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff; }
 
-.label--light {
+.label_light {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.07rem;
   font-weight: normal; }
@@ -411,7 +411,7 @@ template {
   width: 89%;
   max-width: 1140px;
   margin: auto; }
-  .container--hero, .container--header {
+  .container_hero, .container_header {
     width: 89%;
     max-width: 1272px;
     margin: auto; }
@@ -424,7 +424,7 @@ template {
   -webkit-animation-duration: 2s;
   animation-duration: 2s; }
 
-.container--section {
+.container_section {
   max-width: 1234px;
   margin: auto;
   width: 95%; }
@@ -643,7 +643,7 @@ img {
   font-size: 2.5rem;
   line-height: 1.35;
   margin-bottom: 0.9rem; }
-  .title--primary {
+  .title_primary {
     color: #E3B873; }
 
 .types__section-title {
@@ -700,7 +700,7 @@ img {
   color: #ffffff;
   padding: 1rem 2.2rem 1rem 2rem; }
 
-.card--design {
+.card_design {
   padding-top: 1.2rem;
   padding-right: 4.8rem;
   position: absolute;
@@ -731,7 +731,7 @@ img {
   line-height: 1.8rem;
   font-size: 1.2rem; }
 
-.card--project__text {
+.card_project__text {
   position: relative;
   max-width: 20.6rem;
   margin: 0 auto;
@@ -741,17 +741,17 @@ img {
   background-color: #ffffff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
 
-.card--project h3 {
+.card_project h3 {
   font-weight: 400; }
 
-.card--project__title {
+.card_project__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.12rem;
   margin-top: -0.2rem;
   margin-bottom: 0.3rem;
   text-transform: none;
   font-weight: normal; }
-  .card--project__title--long {
+  .card_project__title_long {
     margin-top: 0rem;
     margin-bottom: 0.3rem;
     margin-left: 0.1rem;
@@ -759,7 +759,7 @@ img {
     font-family: 'Yeseva One', cursive;
     text-transform: none; }
 
-.card--project__list {
+.card_project__list {
   padding: 0 0 3.5rem 1.14rem;
   margin: 0;
   font-size: 0.92rem;
@@ -768,7 +768,7 @@ img {
   color: #959595;
   font-weight: normal;
   margin-bottom: -1.9rem; }
-  .card--project__list--long {
+  .card_project__list_long {
     padding: 0 0 3.5rem 1.2rem;
     margin: 0;
     font-size: 0.92rem;
@@ -778,7 +778,7 @@ img {
     font-weight: normal;
     margin-bottom: -1.9rem; }
 
-.card--project__pricetag {
+.card_project__pricetag {
   position: absolute;
   left: 0;
   bottom: -1.7rem;
@@ -789,6 +789,63 @@ img {
   background-color: #E3B873;
   color: #ffffff;
   padding: 1rem 4.75rem 1rem 2rem; }
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal_visible {
+    opacity: 1;
+    visibility: visible; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center/cover;
+    padding: 2.357rem 3.5rem 1.928rem 3.5rem;
+    color: #ffffff; }
+  .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    outline: none;
+    margin: 0.857rem;
+    cursor: pointer; }
+  .modal__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    line-height: 1.857rem;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.428rem; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    margin-bottom: 3.428rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    align-self: flex-end;
+    width: 15.6rem;
+    height: 3.642rem; }
 
 @media screen and (max-width: 1200px) {
   .container {
